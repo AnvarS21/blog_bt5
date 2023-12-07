@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     #installed_apps
     'rest_framework',
     'rest_framework.authtoken',
+    'dj_rest_auth',
+    'drf_yasg',
+    'django_filters',
     #my_apps
     'account',
     'category',
@@ -136,3 +139,22 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Basic Authentication
+# Session Authentication
+# BaseToken Authentication
+# JWT Authentication
+#         OTP Authentication
+#         TOTP Authentication
+#         2F Authentication
+# OAuth Authentication
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication'
+    ],
+    # 'DEFAULT_FILTER_BACKENDS': [
+    #     'django_filters.rest_framework.DjangoFilterBackend'
+    # ],
+}
